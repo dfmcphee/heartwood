@@ -16,6 +16,11 @@ body {
   margin: auto;
 }
 
+.container {
+	max-width: 60rem;
+	margin: 0 auto;
+}
+
 .logo {
   display: block;
   margin: 0 auto;
@@ -28,6 +33,13 @@ body {
   font-size: 1.6rem;
   text-align: center;
   margin: 2rem;
+}
+
+.banner {
+	display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 2rem 0;
 }
 
 .visually-hidden {
