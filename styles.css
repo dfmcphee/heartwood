@@ -17,6 +17,7 @@ html {
 
 body {
 	font-size: 2.4rem;
+	width: 100%;
 }
 
 p {
@@ -31,14 +32,16 @@ h5 {
 	margin: 0;
 }
 
+a:link,
+a:hover,
+a:visited {
+	color: #501936;
+	text-decoration: underline;
+}
+
 .wrapper {
   margin: auto;
   width: 100%;
-}
-
-.container {
-	max-width: 116rem;
-	margin: 0 auto;
 }
 
 .hero {
@@ -74,13 +77,6 @@ h5 {
 
 .body {
  font-size: 2.4rem;
-}
-
-.info {
-  margin: 0;
-  font-size: 1.6rem;
-  text-align: center;
-  margin: 2rem;
 }
 
 .hours {
@@ -126,27 +122,53 @@ h5 {
 .food {
 	background: #EFDDD8;
 	color: #501936;
-	padding: 6rem 40rem 6rem 10rem;
+	padding: 6rem 40rem 0rem 10rem;
+	width: 100%;
 }
 
 .food * + * {
 	margin-top: 2rem;
 }
 
-.food a:link,
-.food a:hover,
-.food a:visited {
+.food-callouts {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 10rem;
+	width: 100%;
+	padding: 10rem;
+	background: #EFDDD8;
 	color: #501936;
-	text-decoration: underline;
+}
+
+.callout {
+	text-align: center;
+	width: 100%;
+	max-width: 20rem;
+}
+
+.callout__icon {
+	width: 6rem;
+	fill: #91274C;
+}
+
+.callout__heading {
+	font-size: 2.4rem;
+	text-transform: uppercase;
+	margin: 2rem;
+}
+
+.callout__text {
+	font-size: 1.8rem;
 }
 
 .food-images {
 	width: 100%;
-	display: flex;
+	display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .food-images img {
-	flex: 0 1 25%;
+	width: 100%;
 	display: block;
 	object-fit: cover;
 }
@@ -169,6 +191,36 @@ h5 {
 .story__image {
 	height: 100%;
 	width: 33%;
+}
+
+.footer {
+	background: #EFDDD8;
+	color: #501936;
+	padding: 6rem 10rem;
+	display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+	width: 100%;
+}
+
+.footer__section {
+	width: 100%;
+}
+
+.footer__section * + * {
+	margin-top: 2rem;
+}
+
+.footer__heading {
+	text-transform: uppercase;
+}
+
+.footer__text {
+	font-size: 1.8rem;
+	font-style: normal;
+}
+
+.footer__logo {
+	width: 15rem;
 }
 
 .visually-hidden {
