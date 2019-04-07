@@ -191,7 +191,6 @@ a:visited {
 }
 
 .story__image {
-	height: 100%;
 	width: 100%;
 }
 
@@ -254,6 +253,10 @@ a:visited {
 		grid-template-columns: 1fr;
 	}
 	
+	.food-images {
+		grid-template-columns: 1fr 1fr;
+	}
+	
 	.story {
 		grid-template-columns: 1fr;
 	}
@@ -264,5 +267,9 @@ a:visited {
 	
 	.footer {
 		grid-template-columns: 1fr;
+	}
+	
+	.footer__section + .footer__section {
+		margin-top: 3.2rem;
 	}
 }
