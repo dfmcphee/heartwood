@@ -1,11 +1,19 @@
+/*---Base---*/
+
+:root {
+	--color-raspberry: #91274C;
+	--color-raspberry-dark: #501936;
+	--color-peach-light: #EFDDD8;
+}
+
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html,
 body {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 html {
@@ -35,14 +43,29 @@ h5 {
 a:link,
 a:hover,
 a:visited {
-	color: #501936;
+	color: var(--color-raspberry-dark);
 	text-decoration: underline;
 }
 
-.wrapper {
-  margin: auto;
-  width: 100%;
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
 }
+
+/*---Layout---*/
+
+.wrapper {
+	margin: auto;
+	width: 100%;
+	max-width: 120rem;
+}
+
+/*---Typography---*/
 
 .heading {
 	font-size: 4.8rem;
@@ -50,12 +73,21 @@ a:visited {
 }
 
 .body {
- font-size: 2.4rem;
+	font-size: 2.4rem;
 }
 
+@media only screen and (max-width: 600px) {
+	.heading {
+		font-size: 3.6rem;
+	}
+}
+
+/*---Components---*/
+
+/* Hero */
 .hero {
 	background-image: url(images/front-desk.jpg);
-	background-color: #501936;
+	background-color: var(--color-raspberry-dark);
 	background-blend-mode: multiply;
 	background-size: cover;
 	opacity: 0.9;
@@ -67,9 +99,9 @@ a:visited {
 }
 
 .hero__logo {
-  display: block;
-  width: 22rem;
-  max-width: 90%;
+	display: block;
+	width: 22rem;
+	max-width: 90%;
 }
 
 .hero__text {
@@ -79,14 +111,23 @@ a:visited {
 	font-family: 'IBM Plex Serif';
 }
 
-.hours {
-	background: #91274C;
-	text-align: center;
-	color: white;
-	font-size: 2rem;
-	padding: 1.2rem;
+@media only screen and (max-width: 600px) {
+	.hero {
+		height: 32rem;
+		padding: 2.4rem;
+	}
+	
+	.hero__logo {
+		width: 16rem;
+	}
+	
+	.hero__text {
+		font-size: 3.6rem;
+		margin-top: 4.8rem;
+	}
 }
 
+/* Tagline */
 .tagline {
 	position: relative;
 	padding: 2rem;
@@ -99,57 +140,147 @@ a:visited {
 }
 
 .tagline::before {
-  content: "";
-  position: absolute;
-  top: 0; 
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: 0.1; 
-  background-image: url(images/logo-no-text.jpg);
-  background-position: center;
+	content: "";
+	position: absolute;
+	top: 0; 
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	opacity: 0.1; 
+	background-image: url(images/logo-no-text.jpg);
+	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
 }
 
 .tagline__text {
-	color: #501936;
+	color: var(--color-raspberry-dark);
 	max-width: 50rem;
 	text-align: center;
 	font-family: 'IBM Plex Serif';
 }
 
-.food {
-	background: #EFDDD8;
-	color: #501936;
-	padding: 6rem 40rem 0rem 10rem;
+@media only screen and (max-width: 600px) {
+	.tagline {
+		font-size: 2.4rem;
+	}
+}
+
+/* Ribbon */
+.ribbon {
+	background: var(--color-raspberry);
+	text-align: center;
+	color: white;
+	font-size: 2rem;
+	padding: 1.2rem;
+}
+
+@media only screen and (max-width: 600px) {
+	.ribbon {
+		font-size: 1.4rem;
+	}
+	
+	.ribbon__label {
+		display: block;
+	}
+}
+
+/* Section */
+.section {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	background: var(--color-peach-light);
+	color: var(--color-raspberry-dark);
 	width: 100%;
 }
 
-.food * + * {
+.section--alternate {
+	background: var(--color-raspberry);
+	color: white;
+}
+
+.section__content {
+	width: 100%;
+	padding: 6rem 10rem;
+}
+
+.section__content * + * {
 	margin-top: 2rem;
 }
 
-.food-callouts {
+.section__image {
+	width: 100%;
+}
+
+.section__image img {
+	display: block;
+	width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+	.section {
+		padding: 4.8rem 2.4rem;
+		grid-template-columns: 1fr;
+	}
+	
+	.section__content {
+		padding: 4.8rem 2.4rem;
+	}	
+}
+
+
+/* Image grid */
+.image-grid {
+	width: 100%;
+	display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.image-grid img {
+	width: 100%;
+	display: block;
+	object-fit: cover;
+}
+
+@media only screen and (max-width: 600px) {
+	.image-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+/* Callout group */
+.callout-group {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 10rem;
 	width: 100%;
 	padding: 10rem;
-	background: #EFDDD8;
-	color: #501936;
+	background: var(--color-peach-light);
+	color: var(--color-raspberry-dark);
 }
 
+@media only screen and (max-width: 600px) {
+	.callout-group {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Callout */
 .callout {
 	text-align: center;
 	width: 100%;
 	max-width: 20rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .callout__icon {
+	display: block;
 	width: 6rem;
-	fill: #91274C;
+	height: 6rem;
+	fill: var(--color-raspberry);
 }
 
 .callout__heading {
@@ -162,41 +293,17 @@ a:visited {
 	font-size: 1.8rem;
 }
 
-.food-images {
-	width: 100%;
-	display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+@media only screen and (max-width: 600px) {
+	.callout {
+		margin: auto;
+		padding: 0;
+	}
 }
 
-.food-images img {
-	width: 100%;
-	display: block;
-	object-fit: cover;
-}
-
-.story {
-	background: #91274C;
-	color: white;
-	display: grid;
-	grid-template-columns: 2fr 1fr;
-}
-
-.story__content {
-	width: 100%;
-	padding: 6rem 10rem;
-}
-
-.story__content * + * {
-	margin-top: 2rem;
-}
-
-.story__image {
-	width: 100%;
-}
-
+/* Footer */
 .footer {
-	background: #EFDDD8;
-	color: #501936;
+	background: var(--color-peach-light);
+	color: var(--color-raspberry-dark);
 	padding: 6rem 10rem;
 	display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -213,6 +320,7 @@ a:visited {
 
 .footer__heading {
 	text-transform: uppercase;
+	font-size: 2.4rem;
 }
 
 .footer__text {
@@ -224,47 +332,7 @@ a:visited {
 	width: 15rem;
 }
 
-.visually-hidden {
-	position: absolute !important;
-	clip: rect(1px, 1px, 1px, 1px);
-	padding:0 !important;
-	border:0 !important;
-	height: 1px !important; 
-	width: 1px !important; 
-	overflow: hidden;
-}
-
 @media only screen and (max-width: 600px) {
-	.hero {
-		height: 32rem;
-		padding: 2.4rem;
-	}
-	
-	.hero__text {
-		font-size: 3.6rem;
-		margin-top: 3.6rem;
-	}
-	
-	.food {
-		padding: 2.4rem;
-	}
-	
-	.food-callouts {
-		grid-template-columns: 1fr;
-	}
-	
-	.food-images {
-		grid-template-columns: 1fr 1fr;
-	}
-	
-	.story {
-		grid-template-columns: 1fr;
-	}
-	
-	.story__content {
-		padding: 2.4rem;
-	}	
-	
 	.footer {
 		grid-template-columns: 1fr;
 	}
