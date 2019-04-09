@@ -3,12 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
 	
 	var feed = new Instafeed({
 		get: 'user',
-		userId: '245809',
-		accessToken: '245809.f6bcbd5.3d33933ce4fa4aa6938f633a3292fad3',
-		template: '<a href="{{link}}"><img src="{{image}}" /></a>',
-		error: function(error) {
-			console.log(error);
-		}
+		userId: '7903795599',
+		accessToken: '7903795599.4cacb17.21ebfa8b752c471db8f1218822cff268',
+		template: '<a class="instafeed__post" href="{{link}}"><img class="instafeed__image" src="{{image}}" /></a>',
+		resolution: 'low_resolution',
+		limit: 8,
 	});
-	//feed.run();
+	feed.run();
 }, false);
