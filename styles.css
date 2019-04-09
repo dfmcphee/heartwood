@@ -261,6 +261,8 @@ a:visited {
 @media only screen and (max-width: 600px) {
 	.callout-group {
 		grid-template-columns: 1fr;
+		padding: 3rem 10rem 6rem;
+		grid-gap: 6arem;
 	}
 }
 
