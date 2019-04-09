@@ -341,18 +341,18 @@ a:visited {
 }
 
 /* Instafeed */
-.instafeed {
+.instafeed-grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.instafeed__post {
+.instafeed {
 	display: block;
 	width: 100%;
 	position: relative;
 }
 
-.instafeed__post::before {
+.instafeed::before {
 	content: "";
 	display: block;
 	padding-bottom: 100%;

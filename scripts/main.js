@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		get: 'user',
 		userId: '7903795599',
 		accessToken: '7903795599.4cacb17.21ebfa8b752c471db8f1218822cff268',
-		template: '<a class="instafeed__post" href="{{link}}"><img class="instafeed__image" src="{{image}}" /></a>',
+		template: '<a class="instafeed" href="{{link}}"><img class="instafeed__image" src="{{image}}" alt="{{caption}}" /></a>',
 		resolution: 'low_resolution',
 		limit: 8,
 	});
