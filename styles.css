@@ -254,7 +254,7 @@ a:visited {
 .image-grid {
 	width: 100%;
 	display: grid;
-  grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 }
 
 .image-grid img {
@@ -322,7 +322,7 @@ a:visited {
 	color: var(--color-raspberry-dark);
 	padding: 6rem 10rem;
 	display: grid;
-  grid-template-columns: 1fr;
+	grid-template-columns: 1fr;
 	width: 100%;
 }
 
