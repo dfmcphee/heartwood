@@ -228,7 +228,6 @@ a:visited {
 	}	
 }
 
-
 /* Image grid */
 .image-grid {
 	width: 100%;
@@ -339,4 +338,31 @@ a:visited {
 	.footer__section + .footer__section {
 		margin-top: 3.2rem;
 	}
+}
+
+/* Instafeed */
+.instafeed-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.instafeed {
+	display: block;
+	width: 100%;
+	position: relative;
+}
+
+.instafeed::before {
+	content: "";
+	display: block;
+	padding-bottom: 100%;
+}
+
+.instafeed__image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
 }
