@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif|IBM+Plex+Sans" rel="stylesheet">
     <link href="styles.css" rel="stylesheet" />
     <title>Heartwood Restaurant</title>
     <meta name="description" content="A family owned restuarant in Combermere, Ontario. Where music is alive, food is fresh, and love is loud." />
@@ -12,13 +12,106 @@
   <body>
     <div class="wrapper">
       <h1 class="visually-hidden">Heartwood Restaurant</h1>
-      <img class="logo" src="logo.png" srcset="logo.png 1x, logo@2x.png 2x" alt="Heartwood Restaurant logo" />
-      <p class="info">
-        39280 Combermere Road
-        <br/>
-        Combermere, Ontario
-      </p>
-      <p class="info">(613) 756-9169</p>
+    	<div class="hero">
+     		<img class="hero__logo"
+      		src="images/logo.svg"
+      		alt="Heartwood Restaurant logo" />
+      	<p class="hero__text">Family food made from scratch with heart</p>
+     	</div>
+
+			<div class="ribbon">
+				<p><span class="ribbon__label">Hours:</span> Mon: Closed, Tues-Sat: 11-8, Sun: 10-3</p>
+			</div>
+			
+			<div class="tagline">
+				<p class="tagline__text">The Heartwood is a home for all. A place of nourishment, community, friendship and family. Where music is alive, food is fresh and love is loud.</p>
+			</div>
+			<section>
+				<div class="section">
+					<div class="section__content">
+						<h2 class="heading">Our Food</h2>
+						<p>Our kitchen cooks up a wide variety of classic family food, from hearty burgers, poutine and wings, to fresh salads and buddha bowls. We’ve got something for everyone.  After 5pm join us for a mouth-watering selection of entrees, all served with our signature heart-beet salad on the side.</p>
+						<p><a href="menu.pdf">View our full menu »</a></p>
+					</div>
+				</div>
+				
+				<div class="callout-group">
+					<div class="callout">
+						<svg role="img" class="callout__icon" alt="Illustration of food being cooked in a pan">
+							<use xlink:href="images/food.svg#food" />
+						</svg>
+						<h3 class="callout__heading">Quality</h3>
+						<p class="callout__text">We use quality, local ingredients whenever we can. Our food is cooked up fresh from scratch, with heart.</p>
+					</div>
+					<div class="callout">
+						<svg role="img" class="callout__icon" alt="Illustration of a menu with a knife and fork on the cover">
+							<use xlink:href="images/menu.svg#menu" />
+						</svg>
+						<h3 class="callout__heading">Variety</h3>
+						<p class="callout__text">We’re serving up something for everyone. Classic diner food, fresh salads, all-day breakfast, delicious entrees and our munchkin menu for kids.</p>
+					</div>
+					<div class="callout">
+						<svg role="img" class="callout__icon" alt="Illustration of a coffee cup with a heart above it">
+							<use xlink:href="images/coffee.svg#coffee" />
+						</svg>
+						<h3 class="callout__heading">Coffee</h3>
+						<p class="callout__text">Proudly serving our own signature blend of coffee from Madawaska Coffee Co, roasted just down the road in Barry’s&nbsp;Bay.</p>
+					</div>
+				</div>
+				
+				<div class="image-grid">
+					<img src="images/burger.jpg" alt="Bacon cheeseburger" />
+	      	<img src="images/bulldog-poutine.jpg" alt="Bulldog breakfast poutine" />
+	      	<img src="images/buddha.jpg" alt="Buddha bowl" />
+	      	<img src="images/club.jpg" alt="Club sandwich" />
+				</div>
+			</section>
+			<section class="section section--alternate">
+				<div class="section__content">
+					<h2 class="heading">Our story</h2>
+					<p>The Heartwood is owned by two sisters from the Ottawa Valley. They share a vision for a place to do all of the things they love — gathering people together, sharing good music, and serving delicious food.</p>
+					<p>The name Heartwood is an homage to their late father, Donald McPhee, who built guitars out of his business Heartwood Guitars. The restaurant is named in his memory to honour not just his craft and creativity, but also his entrepreneurial spirit.</p>
+				</div>
+				<div class="section__image">
+					<picture>
+						<source srcset="images/sisters-large.jpg" media="(min-width: 600px)">
+						<img src="images/sisters-small.jpg" alt="Photo of Shanti and Becky McPhee" />
+					</picture>
+				</div>
+			</section>
+
+			<footer class="footer">
+				<div class="footer__section">
+					<img src="images/logo-raspberry.svg" class="footer__logo" alt="Heartwood Restaurant logo" />
+				</div>
+				<div class="footer__section">
+					<h3 class="footer__heading">Hours</h3>
+					<p class="footer__text">Monday<br/><strong>Closed</strong></p>
+					<p class="footer__text">Tuesday-Saturday<br/><strong>11am - 8pm</strong></p>
+					<p class="footer__text">Sunday<br/><strong>10am-3pm</strong></p>
+				</div>
+				<div class="footer__section">
+					<h3 class="footer__heading">Location</h3>
+					<address class="footer__text">
+	        	39280 Combermere Road
+	        	<br/>
+	        	Combermere, Ontario
+	        	<br/>
+	        	K0J 1L0
+	      	</address>
+	      	<p class="footer__text"><a href="https://www.google.com/maps/place/Heartwood+Restaurant/@45.3634507,-77.6217694,15z/data=!4m5!3m4!1s0x0:0x2b115ac6a84b8953!8m2!3d45.3632882!4d-77.6218468?shorturl=1">View map</a></p>
+				</div>
+				<div class="footer__section">
+					<h3 class="footer__heading">Contact</h3>
+					<p class="footer__text">(613) 756-9169</p>
+					<p class="footer__text"><a href="https://m.facebook.com/heartwoodrestaurant/">Facebook</a></p>
+					<p class="footer__text"><a href="https://www.instagram.com/heartwood.restaurant/">Instagram</a></p>
+				</div>
+			</footer>
+			<div id="instafeed" class="instafeed-grid"></div>
     </div>
+    <script type="text/javascript" src="scripts/instafeed.js"></script>
+    <script type="text/javascript" src="scripts/svg4everybody.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>
