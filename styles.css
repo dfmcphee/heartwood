@@ -173,7 +173,7 @@ a:visited {
 
 .tagline__text {
 	color: var(--color-raspberry-dark);
-	max-width: 50rem;
+	max-width: 75rem;
 	text-align: center;
 	font-family: 'IBM Plex Serif';
 }
